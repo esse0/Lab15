@@ -1,0 +1,18 @@
+<div class="directory-container">
+     {{#each list}}
+            {{> stringbuttonDisabled}}
+    {{/each}}
+</div>
+
+<div class="directory-control">
+    <form>
+        <div class="inputs">
+            <input id="name_field" type="Text" class="input_field" placeholder="Введите имя" />
+            <input id="number_field" type="number" class="input_field" placeholder="Введите номер телефона"/>
+        </div>
+        <div class="buttons">
+            {{> button id='addBtn' value='Добавить' onClick='add(name_field.value, number_field.value)'}}
+            {{{backButton}}}
+        </div>
+    </form>
+</div>

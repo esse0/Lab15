@@ -1,0 +1,19 @@
+<div class="directory-container">
+     {{#each list}}
+            {{> stringbuttonDisabled}}
+    {{/each}}
+</div>
+
+<div class="directory-control">
+    <form>
+        <div class="inputs">
+            <input id="name_field_update" type="Text" class="input_field" value="{{element.fullName}}" placeholder="Введите имя"/>
+            <input id="number_field_update" maxlength="12" type="number" class="input_field" value="{{element.phoneNumber}}" placeholder="Введите номер телефона"/>
+        </div>
+        <div class="buttons">
+            {{> button id='chngBtn' value='Изменить' onClick='update(name_field_update.value, number_field_update.value)'}}
+            {{> button id='deleteBtn' value='Удалить' onClick='_delete()'}}
+            {{{backButton}}}
+        </div>
+    </form>
+</div>
